@@ -1,6 +1,32 @@
 /* stations*/
 .all_stations{
-  display: none;
+  display: block;
+  position: relative;
+  left: 35vw;
+  width: 30vw;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+.zoek{
+  background-color: var(--nav-gray);
+  color: var(--white);
+  width: 20vw;
+  height: 1.5vw;
+  position: relative;
+  left: 40vw;
+  margin-bottom: 4vh;
+  padding-left: 2vw;
+  border: 1pt solid var(--green);
+  border-radius: 15px;
+}
+.zoek__titel{
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2vw;
+  margin-top: 20vh;
+  color: var(--green);
+  font-size: 3vh;
+  font-weight: 550;
 }
 
 
@@ -264,5 +290,15 @@
       padding-right: 2vw;
       margin-left: 8vw;
       font-size: 4vw;
+  }
+  .zoek{
+    position: relative;
+    left: 20vw;
+    width: 60vw;
+    height: 3vh;
+  }
+  .all_stations{
+    left: 20vw;
+    width: 60vw;
   }
 }

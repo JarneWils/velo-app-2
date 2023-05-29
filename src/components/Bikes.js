@@ -6,25 +6,26 @@ import styles from '@/styles/Home.module.css'
 import Image from "next/image";
 
 export default function Bikes() {
-
+  const [filter, setFilter] = useState('');
   const { network, isLoading, isError } = useNetwork()
  
   if (isLoading) return <div>loading</div>
   if (isError) return <div>error</div>
 
-  const stations = network.stations;
+  const stations = network.stations.filter(station => station.name.toLowerCase().indexOf(filter.toLowerCase()) >= 0);
+
+  function handleFilterChange(e) {
+    setFilter(e.target.value);
+  }
 
   return (
     <>
-    <div className={styles.all_stations}>
-    {stations.map(station => <Link href={`/stations/${station.id}`} key={station.id}>{station.name}</Link>)}
-    </div>
 
     <div className={styles.container}>
 
         {/* bike1 */}
         <a className={styles.bike1__link} href="">
-        <div className={styles.bike1} href="https://">
+        <div className={styles.bike1} href=" ">
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
                 <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>1</div>fietsen</div>
@@ -45,7 +46,7 @@ export default function Bikes() {
         </a>
 
         {/* bike2 */}
-        <a className={styles.bike1__link} href="https://">
+        <a className={styles.bike1__link} href=" ">
         <div className={styles.bike2} href="https://">
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
@@ -67,7 +68,7 @@ export default function Bikes() {
         </a>
 
         {/* bike3 */}
-        <a className={styles.bike1__link} href="https://">
+        <a className={styles.bike1__link} href=" ">
         <div className={styles.bike3} href="https://">
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
@@ -88,6 +89,13 @@ export default function Bikes() {
         </div>
         </a>
     </div>
+
+    <div className={styles.zoek__titel}>zoek een station</div>
+    <input className={styles.zoek} type="text" value={filter} onChange={handleFilterChange}/>
+    <div className={styles.all_stations}>
+    {stations.map(station => <Link href={`/stations/${station.id}`} key={station.id}>{station.name}</Link>)}
+    </div>
+    
     </>
   );
 }
