@@ -2,7 +2,7 @@ import fetcher from "./_fetcher"
 import useSWR from 'swr'
 
 export default function useNetwork () {
-    const { data, error, isLoading } = useSWR(`http://api.citybik.es/v2/networks/velo-antwerpen`, fetcher)
+    const { data, error, isLoading } = useSWR(`api`, fetcher)
    
     return {
       network: data?.network,
