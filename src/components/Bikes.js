@@ -20,12 +20,11 @@ export default function Bikes() {
 
   return (
     <>
-
     <div className={styles.container}>
 
         {/* bike1 */}
-        <a className={styles.bike1__link} href="">
-        <div className={styles.bike1} href=" ">
+        <Link className={styles.bike1__link} href={`/info`}>
+        <div className={styles.bike1}>
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
                 <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>1</div>fietsen</div>
@@ -43,11 +42,11 @@ export default function Bikes() {
                 <div className={styles.km1}>6,8 km</div>
             </div>
         </div>
-        </a>
+        </Link>
 
         {/* bike2 */}
-        <a className={styles.bike1__link} href=" ">
-        <div className={styles.bike2} href="https://">
+        <Link className={styles.bike1__link} href={`/info`}>
+        <div className={styles.bike2}>
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
                 <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>13</div>fietsen</div>
@@ -65,11 +64,11 @@ export default function Bikes() {
                 <div className={styles.km1}>0,3 km</div>
             </div>
         </div>
-        </a>
+        </Link>
 
         {/* bike3 */}
-        <a className={styles.bike1__link} href=" ">
-        <div className={styles.bike3} href="https://">
+        <Link className={styles.bike1__link} href={`/info`}>
+        <div className={styles.bike3}>
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
                 <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>8</div>fietsen</div>
@@ -87,7 +86,8 @@ export default function Bikes() {
                 <div className={styles.km1}>7,2 km</div>
             </div>
         </div>
-        </a>
+        </Link>
+
     </div>
 
     <div className={styles.zoek__titel}>zoek een station</div>

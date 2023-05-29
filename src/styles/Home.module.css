@@ -302,3 +302,35 @@
     width: 60vw;
   }
 }
+
+.back{
+  height: 5vh;
+  width: 8vh;
+  position: relative;
+  font-weight: 600;
+  top: 16vh;
+  left: 10vw;
+  padding: 10px;
+  font-size: 2vh;
+  cursor: pointer;
+  background-color: var(--green);
+  color: var(--background-black);
+  border-radius: 10px;
+}
+.info_page{
+  width: 80vw;
+  color: var(--white);
+  font-weight: 600;
+  position: relative;
+  top: 20vh;
+  left: 10vw;
+}
+.station__info{
+  color: var(--white);
+  font-size: 3vh;
+  position: relative;
+  top: 20vh;
+  left: 10vw;
+  height: 50vh;
+  width: 80vw;
+}

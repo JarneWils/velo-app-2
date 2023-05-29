@@ -24,8 +24,8 @@ export default function Navbar() {
             </a>
 
             <ul className={styles.nav__menu}>
-                <li className={styles.nav__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.home}>Home</div> </Link> </li>
-                <li className={styles.nav__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.bikes}>Bikes</div> </Link> </li>
+                <li className={styles.nav__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.home}>Bikes</div> </Link> </li>
+                <li className={styles.nav__item}> <Link href={`/info`} className={styles.nav__link}> <div className={styles.bikes}>Info</div> </Link> </li>
                 <li className={styles.nav__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.abonneer}>Abonneer</div> </Link> </li>
                 <li className={styles.nav__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.help}>Help</div> </Link> </li>
             </ul>
@@ -37,8 +37,8 @@ export default function Navbar() {
             </button>
             {isVisible ? (
                 <div className={styles.menu_mobile}>
-                    <div className={styles.menu_mobile__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.home}>Home</div> </Link> </div>
-                    <div className={styles.menu_mobile__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.bikes}>Bikes</div> </Link> </div>
+                    <div className={styles.menu_mobile__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.home}>Bikes</div> </Link> </div>
+                    <div className={styles.menu_mobile__item}> <Link href={`/info`} className={styles.nav__link}> <div className={styles.bikes}>Info</div> </Link> </div>
                     <div className={styles.menu_mobile__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.abonneer}>Abonneer</div> </Link> </div>
                     <div className={styles.menu_mobile__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.help}>Help</div> </Link> </div>
                 </div>
