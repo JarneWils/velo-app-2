@@ -27,8 +27,8 @@ export default function Bikes() {
         <div className={styles.bike1} href="https://">
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
-                <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>0</div>fietsen</div>
-                <div className={styles.bike1__plaatsen}><div className={styles.aantal_plaatsen}>0</div>plaatsen</div>
+                <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>1</div>fietsen</div>
+                <div className={styles.bike1__plaatsen}><div className={styles.aantal_plaatsen}>26</div>plaatsen</div>
                 <button className={styles.go1}>go</button>
                 </div>
                 <Image
@@ -39,7 +39,7 @@ export default function Bikes() {
                     height={20}
                     priority/>
                     ANTWERPEN CENTRAAL
-                <div className={styles.km1}>0,8 km</div>
+                <div className={styles.km1}>6,8 km</div>
             </div>
         </div>
         </a>
@@ -49,8 +49,8 @@ export default function Bikes() {
         <div className={styles.bike2} href="https://">
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
-                <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>0</div>fietsen</div>
-                <div className={styles.bike1__plaatsen}><div className={styles.aantal_plaatsen}>0</div>plaatsen</div>
+                <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>13</div>fietsen</div>
+                <div className={styles.bike1__plaatsen}><div className={styles.aantal_plaatsen}>14</div>plaatsen</div>
                 <button className={styles.go1}>go</button>
                 </div>
                 <Image
@@ -61,7 +61,7 @@ export default function Bikes() {
                     height={20}
                     priority/>
                     AP HOGESCHOOL
-                <div className={styles.km1}>0,8 km</div>
+                <div className={styles.km1}>0,3 km</div>
             </div>
         </div>
         </a>
@@ -71,8 +71,8 @@ export default function Bikes() {
         <div className={styles.bike3} href="https://">
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
-                <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>0</div>fietsen</div>
-                <div className={styles.bike1__plaatsen}><div className={styles.aantal_plaatsen}>0</div>plaatsen</div>
+                <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>8</div>fietsen</div>
+                <div className={styles.bike1__plaatsen}><div className={styles.aantal_plaatsen}>19</div>plaatsen</div>
                 <button className={styles.go1}>go</button>
                 </div>
                 <Image
@@ -83,7 +83,7 @@ export default function Bikes() {
                     height={20}
                     priority/>
                     DE MEIR
-                <div className={styles.km1}>0,8 km</div>
+                <div className={styles.km1}>7,2 km</div>
             </div>
         </div>
         </a>

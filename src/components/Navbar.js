@@ -1,10 +1,11 @@
 import React, { Children, useState } from "react";
 import styles from '@/styles/Home.module.css'
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
     
-    const [isVisible, setIsVisible] = useState(false);7
+    const [isVisible, setIsVisible] = useState(false);
     function handleClick() {
         setIsVisible(!isVisible);
     }
@@ -23,10 +24,10 @@ export default function Navbar() {
             </a>
 
             <ul className={styles.nav__menu}>
-                <li className={styles.nav__item}> <a href="https://" className={styles.nav__link}> <div className={styles.home}>Home</div> </a> </li>
-                <li className={styles.nav__item}> <a href="/Home" className={styles.nav__link}> <div className={styles.bikes}>Bikes</div> </a> </li>
-                <li className={styles.nav__item}> <a href="http://localhost:3000/stations/06d693a20ca7920cd4bb682a2cc4f087" className={styles.nav__link}> <div className={styles.abonneer}>Abonneer</div> </a> </li>
-                <li className={styles.nav__item}> <a href="https://" className={styles.nav__link}> <div className={styles.help}>Help</div> </a> </li>
+                <li className={styles.nav__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.home}>Home</div> </Link> </li>
+                <li className={styles.nav__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.bikes}>Bikes</div> </Link> </li>
+                <li className={styles.nav__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.abonneer}>Abonneer</div> </Link> </li>
+                <li className={styles.nav__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.help}>Help</div> </Link> </li>
             </ul>
 
             <button onClick={handleClick} className={styles.nav__toggler}>
@@ -36,10 +37,10 @@ export default function Navbar() {
             </button>
             {isVisible ? (
                 <div className={styles.menu_mobile}>
-                    <div className={styles.menu_mobile__item}> <a href="https://" className={styles.nav__link}> <div className={styles.home}>Home</div> </a> </div>
-                    <div className={styles.menu_mobile__item}> <a href="https://" className={styles.nav__link}> <div className={styles.bikes}>Bikes</div> </a> </div>
-                    <div className={styles.menu_mobile__item}> <a href="https://" className={styles.nav__link}> <div className={styles.abonneer}>Abonneer</div> </a> </div>
-                    <div className={styles.menu_mobile__item}> <a href="https://" className={styles.nav__link}> <div className={styles.help}>Help</div> </a> </div>
+                    <div className={styles.menu_mobile__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.home}>Home</div> </Link> </div>
+                    <div className={styles.menu_mobile__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.bikes}>Bikes</div> </Link> </div>
+                    <div className={styles.menu_mobile__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.abonneer}>Abonneer</div> </Link> </div>
+                    <div className={styles.menu_mobile__item}> <Link href={`/`} className={styles.nav__link}> <div className={styles.help}>Help</div> </Link> </div>
                 </div>
             ): null }
         </nav>
