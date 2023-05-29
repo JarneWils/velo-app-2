@@ -216,13 +216,14 @@
       margin-bottom: 5vh;
       background-size: cover;
   }
-  .pin-icon{
-      height: 5vw;
-      margin-right: 2vw;
+  .pin_icon{
+    height: 3.8vw;
+    width: 2.5vw;
+    margin-right: 2vw;
   }
   .bike__title{
       position: relative;
-      left: 2vw;
+      left: 3vw;
       top: 1vw;
       color: var(--white);
       font-size: 5vw;
@@ -233,6 +234,7 @@
       color: var(--green);
       font-weight: 700;
       font-size: 5vw;
+      margin-top: 0.5vh;
   }
   .bike__info__container{
       display: flex;
