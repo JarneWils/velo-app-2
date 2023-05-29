@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import styles from '@/styles/Home.module.css'
 import Image from "next/image";
 
@@ -10,6 +10,7 @@ export default function Navbar() {
     }
 
     return (
+        <>
         <nav className={styles.nav}>
             <a href="https://" className={styles.nav__logo}>
                 <Image
@@ -23,8 +24,8 @@ export default function Navbar() {
 
             <ul className={styles.nav__menu}>
                 <li className={styles.nav__item}> <a href="https://" className={styles.nav__link}> <div className={styles.home}>Home</div> </a> </li>
-                <li className={styles.nav__item}> <a href="https://" className={styles.nav__link}> <div className={styles.bikes}>Bikes</div> </a> </li>
-                <li className={styles.nav__item}> <a href="https://" className={styles.nav__link}> <div className={styles.abonneer}>Abonneer</div> </a> </li>
+                <li className={styles.nav__item}> <a href="/Home" className={styles.nav__link}> <div className={styles.bikes}>Bikes</div> </a> </li>
+                <li className={styles.nav__item}> <a href="http://localhost:3000/stations/06d693a20ca7920cd4bb682a2cc4f087" className={styles.nav__link}> <div className={styles.abonneer}>Abonneer</div> </a> </li>
                 <li className={styles.nav__item}> <a href="https://" className={styles.nav__link}> <div className={styles.help}>Help</div> </a> </li>
             </ul>
 
@@ -42,5 +43,6 @@ export default function Navbar() {
                 </div>
             ): null }
         </nav>
+        </>
       );
   }

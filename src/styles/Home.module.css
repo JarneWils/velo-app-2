@@ -1,8 +1,18 @@
-/* De navigatie menu*/
+/* stations*/
+.all_stations{
+  display: none;
+}
 
+
+/* De active navigatie menu*/
 .bikes{
   color: var(--green);
 }
+
+
+
+
+/* Navigatiebalk */
 
 .nav{
   position: fixed;
@@ -97,9 +107,7 @@
 
 /* De body van de pagina*/
 
-
 .container{
-  height: 130vh;
   width: 80vw;
   justify-content: center;
   align-items: center;
