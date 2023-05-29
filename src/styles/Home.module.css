@@ -4,14 +4,6 @@
 }
 
 
-/* De active navigatie menu*/
-.bikes{
-  color: var(--green);
-}
-
-
-
-
 /* Navigatiebalk */
 
 .nav{
@@ -109,6 +101,7 @@
 
 .container{
   width: 80vw;
+  margin-bottom: 11vw;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -273,12 +266,3 @@
       font-size: 4vw;
   }
 }
-
-
-
-
-
-
-/* De footer*/
-
-
