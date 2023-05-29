@@ -23,6 +23,10 @@ a:hover{
   color: var(--green);
   font-weight: 500;
 }
+button{
+  background-color: transparent;
+  border: none;
+}
 
 :root{
   --nav-gray: #3c3c3c;

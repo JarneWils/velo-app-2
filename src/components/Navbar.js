@@ -4,11 +4,10 @@ import Image from "next/image";
 
 export default function Navbar() {
     
-    const [active, setActive] = useState("nav__menu");
-
-    const navToggle = () => {
-        setActive(active === "nav__menu" ? "nav__menu nav__active" : "nav__menu");
-    };
+    const [isVisible, setIsVisible] = useState(false);7
+    function handleClick() {
+        setIsVisible(!isVisible);
+    }
 
     return (
         <nav className={styles.nav}>
@@ -29,11 +28,19 @@ export default function Navbar() {
                 <li className={styles.nav__item}> <a href="https://" className={styles.nav__link}> <div className={styles.help}>Help</div> </a> </li>
             </ul>
 
-            <div onClick={navToggle}className={styles.nav__toggler}>
+            <button onClick={handleClick} className={styles.nav__toggler}>
                 <div className={styles.line1}></div>
                 <div className={styles.line2}></div>
                 <div className={styles.line3}></div>
-            </div>
+            </button>
+            {isVisible ? (
+                <div className={styles.menu_mobile}>
+                    <div className={styles.menu_mobile__item}> <a href="https://" className={styles.nav__link}> <div className={styles.home}>Home</div> </a> </div>
+                    <div className={styles.menu_mobile__item}> <a href="https://" className={styles.nav__link}> <div className={styles.bikes}>Bikes</div> </a> </div>
+                    <div className={styles.menu_mobile__item}> <a href="https://" className={styles.nav__link}> <div className={styles.abonneer}>Abonneer</div> </a> </div>
+                    <div className={styles.menu_mobile__item}> <a href="https://" className={styles.nav__link}> <div className={styles.help}>Help</div> </a> </div>
+                </div>
+            ): null }
         </nav>
       );
   }

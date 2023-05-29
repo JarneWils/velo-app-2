@@ -1,3 +1,9 @@
+/* De navigatie menu*/
+
+.bikes{
+  color: var(--green);
+}
+
 .nav{
   position: fixed;
   display: flex;
@@ -29,9 +35,24 @@
 .nav__item{
   width: 10vw;
 }
-
+.menu_mobile{
+  position: fixed;
+  top: 0vh;
+  right: 0vw;
+  background-color: var(--nav-gray);
+  height: 100vh;
+  width: 33vw;
+  display: none;
+}
+.menu_mobile__item{
+  position: relative;
+  top: 10vh;
+  margin-bottom: 5vh;
+  text-align: center;
+}
 
 .nav__toggler div{
+  
   width: 2.5rem;
   height: 0.3rem;
   margin: 0.4rem;
@@ -64,6 +85,9 @@
       gap: 4vh;
       transform: translateX(98vh);
   }
+  .menu_mobile{
+    display: block;
+  }
 }
 
 
@@ -71,7 +95,7 @@
 
 
 
-
+/* De body van de pagina*/
 
 
 .container{
@@ -95,10 +119,10 @@
   gap: 4vw;
   transition-duration: 0.3s;
 }
-.bike1__plaatsen{
+.bike1__plaatsen, .bike1__fietsen{
   display: flex;
   position: relative;
-  top: 1vh;
+  top: 1.5vh;
   left: 3vw;
   font-size: 2.5vh;
   font-weight: 300;
@@ -107,14 +131,6 @@
   color: var(--green);
   font-weight: 600;
   margin-right: 1vw;
-}
-.bike1__fietsen{
-  display: flex;
-  position: relative;
-  top: 1vh;
-  left: 3vw;
-  font-size: 2.5vh;
-  font-weight: 300;
 }
 .bike1__aantal-fietsen{
   color: var(--green);
@@ -132,11 +148,12 @@
   height: 6vh;
   padding-left: 3vh;
   padding-right: 3vh;
-  margin-left: 15vw;
+  margin-left: 11vw;
   text-transform: uppercase;
 }
 .pin_icon{
   height: 2vw;
+  width: 1.5vw;
   margin-right: 2vw;
 }
 .bike__title{
@@ -148,75 +165,40 @@
   font-weight: 700;
   letter-spacing: 0.1vw;
 }
+.aantal_fietsen, .aantal_plaatsen{
+  margin-right: 1vw;
+}
 .km1{
   color: var(--green);
   font-weight: 700;
   font-size: 2vw;
 }
 
-.bike1{
+.bike1, .bike2, .bike3{
   position: relative;
   top: 16vh;
   margin-bottom: 6vh;
   height: 12vw;
+  filter: brightness(1);
+  border-radius: 15px;
+  transition-duration: 0.3s;
+  filter: contrast(1.2);
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.bike1{
   background-image: url('../../public/city-img-centraal.png');
   background-size: 100%;
-  filter: brightness(1);
-  border-radius: 15px;
-  transition-duration: 0.3s;
-  filter: contrast(1.2);
-  overflow: hidden;
-  text-transform: uppercase;
 }
-.bike1:hover{
-  top: 15.5vh;
-  filter: brightness(1);
-  transition-duration: 0.3s;
-  .bike__info__container{
-      display: flex;
-      transition-duration: 0.3s;
-  }
-}
-
 .bike2{
-  position: relative;
-  top: 16vh;
-  margin-bottom: 6vh;
-  height: 12vw;
   background-image: url('../../public/city-img-brug.png');
   background-size: 100%;
-  filter: brightness(1);
-  border-radius: 15px;
-  transition-duration: 0.3s;
-  filter: contrast(1.2);
-  overflow: hidden;
-  text-transform: uppercase;
 }
-.bike2:hover{
-  top: 15.5vh;
-  filter: brightness(1);
-  transition-duration: 0.3s;
-  .bike__info__container{
-      display: flex;
-      transition-duration: 0.3s;
-  }
-}
-
 .bike3{
-  position: relative;
-  top: 16vh;
-  margin-bottom: 6vh;
-  height: 12vw;
   background-image: url('../../public/city-img-mair.png');
   background-size: 100%;
-  filter: brightness(1);
-  border-radius: 15px;
-  transition-duration: 0.3s;
-  filter: contrast(1.2);
-  overflow: hidden;
-  text-transform: uppercase;
 }
-.bike3:hover{
+.bike1:hover, .bike2:hover, .bike3:hover{
   top: 15.5vh;
   filter: brightness(1);
   transition-duration: 0.3s;
@@ -228,19 +210,7 @@
 
 
 @media screen and (max-width: 770px) {
-  .bike1{
-      height: 30vw;
-      top: 15vh;
-      margin-bottom: 5vh;
-      background-size: cover;
-  }
-  .bike2{
-      height: 30vw;
-      top: 15vh;
-      margin-bottom: 5vh;
-      background-size: cover;
-  }
-  .bike3{
+  .bike1, .bike2, .bike3{
       height: 30vw;
       top: 15vh;
       margin-bottom: 5vh;
@@ -266,36 +236,39 @@
   }
   .bike__info__container{
       display: flex;
-      height: 7vw;
+      height: 6vw;
       width: 55vw;
       margin-top: 1vh;
       margin-bottom: 1vh;
       background-color: var(--white);
       color: var(--background-black);
   }
-  .bike1__plaatsen{
+  .bike1__plaatsen, .bike1__fietsen{
       left: 5vw;
-      top: 0.5vh;
-      font-size: 4vw;
+      top: 1vw;
+      font-size: 3.5vw;
       font-weight: 400;
   }
   .bike1__aantal-plaatsen{
       color: var(--nav-gray);
   }
-  .bike1__fietsen{
-      left: 5vw;
-      top: 0.5vh;
-      font-size: 4vw;
-      font-weight: 400;
-  }
   .bike1__aantal-fietsen{
       color: var(--nav-gray);
   }
   .go1{
-      height: 7vw;
+      height: 6vw;
       padding-left: 2vw;
       padding-right: 2vw;
       margin-left: 8vw;
       font-size: 4vw;
   }
 }
+
+
+
+
+
+
+/* De footer*/
+
+

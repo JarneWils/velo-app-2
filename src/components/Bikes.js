@@ -1,8 +1,11 @@
 import React from "react";
+import { useState } from "react";
 import styles from '@/styles/Home.module.css'
 import Image from "next/image";
 
 export default function Bikes() {  
+
+    const [count, setCount] = useState(0);
 
   return (
     <div className={styles.container}>
@@ -12,8 +15,8 @@ export default function Bikes() {
         <div className={styles.bike1} href="https://">
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
-                <div className={styles.bike1__fietsen}>...fietsen</div>
-                <div className={styles.bike1__plaatsen}>...plaatsen</div>
+                <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>{count}</div>fietsen</div>
+                <div className={styles.bike1__plaatsen}><div className={styles.aantal_plaatsen}>{count}</div>plaatsen</div>
                 <button className={styles.go1}>go</button>
                 </div>
                 <Image
@@ -34,8 +37,8 @@ export default function Bikes() {
         <div className={styles.bike2} href="https://">
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
-                <div className={styles.bike1__fietsen}>...fietsen</div>
-                <div className={styles.bike1__plaatsen}>...plaatsen</div>
+                <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>{count}</div>fietsen</div>
+                <div className={styles.bike1__plaatsen}><div className={styles.aantal_plaatsen}>{count}</div>plaatsen</div>
                 <button className={styles.go1}>go</button>
                 </div>
                 <Image
@@ -56,8 +59,8 @@ export default function Bikes() {
         <div className={styles.bike3} href="https://">
           <div className={styles.bike__title}>
             <div className={styles.bike__info__container}>
-                <div className={styles.bike1__fietsen}>...fietsen</div>
-                <div className={styles.bike1__plaatsen}>...plaatsen</div>
+                <div className={styles.bike1__fietsen}><div className={styles.aantal_fietsen}>{count}</div>fietsen</div>
+                <div className={styles.bike1__plaatsen}><div className={styles.aantal_plaatsen}>{count}</div>plaatsen</div>
                 <button className={styles.go1}>go</button>
                 </div>
                 <Image
@@ -72,8 +75,6 @@ export default function Bikes() {
             </div>
         </div>
         </a>
-
-
     </div>
 
   );
